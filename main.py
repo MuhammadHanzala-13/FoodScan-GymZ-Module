@@ -104,7 +104,7 @@ async def analyze_food(file: UploadFile = File(...)):
         try:
             client = genai.Client(api_key=gemini_key)
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3.5-flash",
                 contents=[
                     types.Part.from_bytes(
                         data=contents,
